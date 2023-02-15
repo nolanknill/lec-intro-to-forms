@@ -1,0 +1,24 @@
+.form {
+    &__input-group {
+        margin-bottom: 1rem;
+    }
+}
+
+.about-you {
+    display: flex;
+    flex-direction: column;
+    
+    &__textarea {
+        margin-top: 0.5rem;
+        resize: none;
+        height: 5rem;
+        width: 15rem;
+    }
+}
+
+.error-message {
+    color: red;
+    &--hide {
+        display:none;
+    }
+}

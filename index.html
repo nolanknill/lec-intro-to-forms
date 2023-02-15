@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture: Intro to HTML Forms</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <h1>Lecture: Intro to HTML Forms</h1>
+
+    <section>
+        <h2>Existing Play Dates</h2>
+        <ul class="play-date-list">
+        </ul>    
+    </section>
+    
+    <form id="puppy-play-date-form" class="form">
+        <h2>Puppy play date sign up</h2>
+
+        <div class="form__input-group">
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Name">
+        </div>
+
+        <!-- 
+        <div class="form__input-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        -->
+
+        <!-- TODO: Add a textarea -->
+        <div class="form__input-group about-you">
+            <label for="aboutYou">About You</label>
+            <textarea class="about-you__textarea" id="aboutYou" placeholder="One paragraph describing who you are" name="aboutYou"></textarea>
+        </div>
+
+        <div class="form__input-group">
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email">
+            <span class="error-message error-message--hide" id="error-message-email">Field is required.</span>
+        </div>
+        
+        <div class="form__input-group">
+            <!-- Phone number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone" id="phone" placeholder="Phone">
+        </div>
+
+        <fieldset class="form__input-group">
+            <!-- Preferred contact method -->
+            <legend>Preferred contact method</legend>
+            
+            <label for="preferPhone">Phone</label>
+            <input type="radio" id="preferPhone" name="contactMethod" value="phone">
+            
+            <label for="preferEmail">Email</label>
+            <input type="radio" id="preferEmail" name="contactMethod" value="email">
+        </fieldset>
+
+        
+        <div class="form__input-group">
+            <!-- Purpose of the play date -->
+            <span>Purpose of the play date:</span>
+
+            <select name="visitPurpose">
+                <option value="">-- Please select a purpose --</option>
+                <option value="Cuddles">Cuddles</option>
+                <option value="Cure sadness">Cure sadness</option>
+                <option value="Exercise">Exercise</option>
+                <option value="Just for fun">Just for fun</option>
+                <option value="New to town">New to town</option>
+            </select>
+            <span class="error-message error-message--hide" id="error-message-visit-purpose">Field is required.</span>
+        </div>
+
+        <div class="form__input-group">
+            <label for="agreeToFun">Agree to have the best puppy play date ever?</label>
+            <input type="checkbox" id="agreeToFun" name="agreeToFun">
+            <span class="error-message error-message--hide"  id="error-message-agree-to-fun">Field is required.</span>
+        </div>
+
+        <input type="hidden" name="country" value="USA">
+
+        <div class="form__input-group">
+            <button>Request Puppy Play Date</button>
+        </div>
+    </form>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
